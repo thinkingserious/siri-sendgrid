@@ -41,9 +41,12 @@ $pass = '[[SendGrid Password]]';
 $subject = $_POST['subject'];
 $text =  $_POST['text'];
 
+// Use this variable as your API switch. In this case, there is on only one.
 $api = $subject;
+// Use this variable as the API command. In this case, there is no command.
 $command = $text;
 
+// The one and only action Siri will understand. Create some more!
 if($api == "Motivate me"){
 	// Include the Twilio PHP library
 	require 'Services/Twilio.php';
